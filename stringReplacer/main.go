@@ -21,7 +21,7 @@ func main(){
 	for scan.Scan() { //this act like a while loop
 		
 		s := strings.Split(scan.Text(), old,) //split the read line into slice removing old-word
-		
+		fmt.Println(s)
 		//for example s = ["", " are in the"]
 		t := strings.Join(s, new) // join the slice using new word
 
