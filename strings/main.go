@@ -36,5 +36,10 @@ func main() {
 	fmt.Printf("%d\n", len(s))
 
 	//we can only see 6 charac in "Nǐ hǎo" with the space but len return the length of the byte string that need to encode this in utf-8
-
+	//"N"    → 1 byte
+	// "ǐ"   → 2 bytes
+	// " "   → 1 byte
+	// "h"   → 1 byte
+	// "ǎ"   → 2 bytes
+	// "o"   → 1 byte
 }
