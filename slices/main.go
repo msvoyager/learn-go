@@ -67,6 +67,7 @@ func doi(a [3]int, b []int) []int {
 	
 	fmt.Println(b)
 	fmt.Println(c)
+	fmt.Println(a)
 
 	return c
 }
