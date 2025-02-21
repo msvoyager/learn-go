@@ -54,7 +54,17 @@ func doi(a [3]int, b []int) []int {
 	b[0] = 3
 
 	c := make([]int, 5)
+	u := [4]int{1, 2, 3, 4}
+	p := append(u[1:3], 5, 8, 9)
+	fmt.Println("len of p slice",len(p))	//len of p slice 5
+	fmt.Println("cap of p slice",cap(p))	//cap of p slice 6
+	fmt.Println("p slice", p)
+	fmt.Println("u array", u)
 	c[4] = 42 //[0 0 0 0 42]
+	fmt.Println("capacity of the slice",cap(c))
+	fmt.Println("len of the slices", len(c))
+	// The length of a slice is the number of elements it contains. The capacity
+	// of a slice is the number of elements in the underlying array, counting from the first element in the slice
 	fmt.Println(c)
 	copy(c, b) //copy(dst, src []Type) int
 	// c -> [0 0 0 0 42] and b -> [3 1 2] what copy do is get the items from b and replace with the existing elements that are in same index
