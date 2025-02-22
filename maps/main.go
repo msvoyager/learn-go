@@ -44,7 +44,7 @@ func main() {
 	fmt.Println(len(c)) //-> 2
 
 
-	//there is another way to make a empty map
+	//there is another way to make a empty map 
 
 	f := map[string]int{}
 
@@ -56,9 +56,9 @@ func main() {
 	fmt.Println(a, ok) //0, false
 	//this is using in conditional statements to make sure return was not the default value
 
-	// if w, ok := f["the"]; ok {
-
-	// }
+	if w, ok := f["the"]; ok {
+		fmt.Println("there was a key called 'the'", w)
+	}
 
 	
 
