@@ -56,8 +56,8 @@ func doi(a [3]int, b []int) []int {
 	c := make([]int, 5)
 	u := [4]int{1, 2, 3, 4}
 	p := append(u[1:3], 5, 8, 9)
-	fmt.Println("len of p slice",len(p))	//len of p slice 5
-	fmt.Println("cap of p slice",cap(p))	//cap of p slice 6
+	fmt.Println("len of p slice",len(p))	//len of p slice 5  slice contain 2,3,5,8,9
+	fmt.Println("cap of p slice",cap(p))	//cap of p slice 6 underlying array contain 2,3,4,5,8,9
 	fmt.Println("cap of u array",cap(u))	//4
 	fmt.Println("p slice", p)
 	fmt.Println("u array", u)
