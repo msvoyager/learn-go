@@ -42,7 +42,7 @@ func main() {
 	odds := []int{1,1,1,1,1,1,1}
 	fmt.Println("sum", sum(odds...))
 
-	result := processNum(10, double) //double is a function
+	result := processNum(10, half) //double is a function
 
 	fmt.Println(result)
 
