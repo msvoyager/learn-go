@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 )
 type BankAcc struct {
@@ -17,16 +18,23 @@ func (b BankAcc) DisplayBalance() { //b is a value reciever
 
 //we can use pointer recievers also change the original location value instead of taking a copy and modify it
 
-func (c *BankAcc) withdraw(amount float64) {
-	if c.Balance > amount {
-		c.Balance -= amount
+func (c *BankAcc) withdraw(amount float64) error{
+	if c.Balance < amount {
+		return errors.New("insufficient funds")
 	}
+	c.Balance -= amount
+	return nil
 	
 }
 func main() {
 	account := BankAcc{AccNumber: "102350", Balance: 850.222}
-	account.withdraw(10.00)
-	account.DisplayBalance() //when this called bAcc recieve the values of account
+	err := account.withdraw(500.00)
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		account.DisplayBalance()
+	}
+	 //when this called bAcc recieve the values of account
 	//because of that bAcc argument identify as a reciever argument
 	//methods can only have one reciever
 
