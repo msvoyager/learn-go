@@ -37,6 +37,10 @@ func main() {
 
 	fmt.Println(account3)
 
+	//acess auditInfo instance directly
+
+	fmt.Println(account3.AuditInfo.CreatedAt)
+
 	emp := Employee{"ABC", 19078}
 	pts := &emp
 	fmt.Println(pts)
