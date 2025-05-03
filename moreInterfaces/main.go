@@ -3,6 +3,9 @@ package main
 import (
 	"fmt"
 )
+
+//resource i used in this topic -> https://www.digitalocean.com/community/tutorials/how-to-use-interfaces-in-go
+
 //provide a platform(interface) to call methods
 type Article struct {
 	Title string
@@ -33,14 +36,15 @@ func main() {
 		Title: "Understanding Interfaces in Go",
 		Author: "Sammy Shark",
 	}
-	Print(a)
+	
 
 	b := Book{
 		Title: "learn go by practice",
 		Author: "henry max",
 		Pages: 1000,
 	}
-	Print(b)
+
+	Print(a,b)
 }
 
 //without using interfaces we can create a function to call the method
@@ -49,7 +53,8 @@ func main() {
 // }
 
 
-func Print(s Stringer) {
+func Print(s,  b  Stringer) {
 	fmt.Println(s.String())
+	fmt.Println(b.String())
 
 }
